@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard';
 import Quiz from './pages/Quiz';
 import StudyPlanner from './pages/StudyPlanner';
 import TopicExplainer from './pages/TopicExplainer';
+import NotFound from './pages/NotFound';
 
 import ProtectedRoute from './components/ProtectedRoute';
 import Navbar from './components/Navbar';
@@ -55,6 +56,8 @@ function App() {
               </ProtectedRoute>
             }
           />
+          {/* Catch-all Not Found route */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>
